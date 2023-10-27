@@ -324,3 +324,120 @@
  *             schema:
  *               $ref: '#/components/schemas/Request_Tables'
  */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     About_us:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         content:
+ *           type: string
+ *     Lets_talks:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         content:
+ *           type: string
+ *     Mentees:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         user_id:
+ *           type: integer
+ *         name:
+ *           type: string
+ *         student_type:
+ *           type: string
+ *         preferred_profession:
+ *           type: string
+ *         preferred_management:
+ *           type: string
+ *         preferred_counselor:
+ *           type: string
+ *         gender:
+ *           type: string
+ *         same_gender:
+ *           type: boolean
+ *         linkedin_url:
+ *           type: string
+ *         photo_url:
+ *           type: string
+ *     Mentors:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         user_id:
+ *           type: integer
+ *         name:
+ *           type: string
+ *         profession:
+ *           type: string
+ *         gender:
+ *           type: string
+ *         management:
+ *           type: boolean
+ *         counselor:
+ *           type: string
+ *         same_gender:
+ *           type: boolean
+ *         linkedin_url:
+ *           type: string
+ *         photo_url:
+ *           type: string
+ *     QR_Table:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         content:
+ *           type: string
+ *     Request_Tables:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         mentee_id:
+ *           type: integer
+ *         mentor_id:
+ *           type: integer
+ *         status:
+ *           type: string
+ *     Users:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         name:
+ *           type: string
+ *         email:
+ *           type: string
+ *         password:
+ *           type: string
+ *         role:
+ *           type: string
+ *     Login:
+ *       type: object
+ *       properties:
+ *         email:
+ *           type: string
+ *         password:
+ *           type: string
+ *     Register:
+ *       type: object
+ *       properties:
+ *         name:
+ *           type: string
+ *         email:
+ *           type: string
+ *         password:
+ *           type: string
+ *         role:
+ *           type: string
+ */
