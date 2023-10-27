@@ -10,8 +10,11 @@ app.get('/heartbeat', (req, res) => {
 });
 app.use(express.json())
 app.get('/', (req, res) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.send(mySwagger);
+  const options = {
+    explorer: true,
+    customCssUrl: "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css",
+  };
+  swaggerUi.setup(mySwagger, options)(req, res);
 });
 
 const options = 
