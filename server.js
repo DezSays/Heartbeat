@@ -9,6 +9,11 @@ app.get('/heartbeat', (req, res) => {
   res.send('heartbeat');
 });
 app.use(express.json())
+app.get('/', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(mySwagger);
+});
+
 const options = 
   {
     definition:{
