@@ -2,7 +2,6 @@ const swaggerUiPath = require('swagger-ui-dist').getAbsoluteFSPath();
 const express = require("express");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-
 const app = express();
 const port = 3000;
 
