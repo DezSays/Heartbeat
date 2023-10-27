@@ -845,7 +845,7 @@ const specs = swaggerJsdoc(options);
 app.use(
   "/",
   swaggerUi.serve,
-  swaggerUi.setup(specs, { explorer: true })(req, res)
+  swaggerUi.setup(specs, { explorer: true })
 
 );
 
