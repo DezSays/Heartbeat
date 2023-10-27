@@ -19,7 +19,7 @@ const options =
     definition:{
     "openapi": "3.0.3",
     "info": {
-      "title": "Swagger Petstore - OpenAPI 3.0",
+      "title": "City of Refuge Mentor/Mentee Server",
       "description": "This server is an API service that facilitates the management of users, including operations such as user registration, login, profile retrieval, and logout. Additionally, it supports the handling of various data entities such as About Us information, Mentors, Mentees, QR codes, and request forms. The API provides endpoints for retrieving, creating, and updating these different data entities. The server is documented using Swagger, which allows for clear and standardized documentation of the available API endpoints and data schemas.",
       "termsOfService": "http://swagger.io/terms/",
       "contact": {
@@ -845,7 +845,8 @@ const specs = swaggerJsdoc(options);
 app.use(
   "/",
   swaggerUi.serve,
-  swaggerUi.setup(specs)
+  swaggerUi.setup(specs, { explorer: true })(req, res)
+
 );
 
 app.listen(port, () => {
