@@ -1,14 +1,17 @@
 const express = require("express");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+const path = require("path");
 const app = express();
 const port = 3000;
-const mySwagger = require("./openapi.json")
+const mySwagger = require("./openapi.json");
 
 app.get('/heartbeat', (req, res) => {
   res.send('heartbeat');
 });
 app.use(express.json())
+app.use('/swagger-ui', express.static(path.join(__dirname, 'node_modules/swagger-ui-dist')));
+
 app.get('/', (req, res) => {
   const options = {
     explorer: true,
