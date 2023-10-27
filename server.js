@@ -133,7 +133,7 @@ const options = {
       },
     ],
   },
-    apis: ["./server.js"],
+    apis: ["https://heartbeat-five.vercel.app/"],
 };
 
 const specs = swaggerJsdoc(options);
