@@ -2,18 +2,11 @@ const swaggerUiPath = require('swagger-ui-dist').getAbsoluteFSPath();
 const express = require("express");
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-const path = require("path");
+
 const app = express();
 const port = 3000;
-const mySwagger = require("./openapi.json");
 
-app.get('/docs', (req, res) => {
-  const options = {
-    explorer: true,
-    customCssUrl: "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css",
-  };
-  swaggerUi.setup(mySwagger, options)(req, res);
-});
+
 
 app.get('/heartbeat', (req, res) => {
   res.send('heartbeat');
@@ -852,11 +845,7 @@ const specs = swaggerJsdoc(options);
 app.use(
   "/",
   swaggerUi.serve,
-  swaggerUi.setup(specs, {
-    explorer: true,
-    customCssUrl:
-      "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css",
-  })
+  swaggerUi.setup(specs)
 );
 
 app.listen(port, () => {
